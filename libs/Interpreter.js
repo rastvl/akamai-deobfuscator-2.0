@@ -38,11 +38,14 @@ class Interpreter {
     }
 
     if (t.isLiteral(node)) {
-      // if (t.isNullLiteral(node)) {
-      //   return null;
-      // }
-      // return node.value;
-      return global.eval(generate(node).code)
+      // return global.eval(generate(node).code)
+      if (t.isNullLiteral(node)) {
+        return null;
+      }
+      if (t.isRegExpLiteral(node)) {
+        return new RegExp(node.pattern, node.flags);
+      }
+      return node.value;
     }
 
     if (t.isBinaryExpression(node)) {
@@ -193,6 +196,7 @@ class Interpreter {
           object = ctx.env.lookup(objectName);
         }
         if (!object) {
+          debugger;
           throw `Undefined object in assignment... ${generate(node).code}`;
         }
         let prop;
@@ -425,12 +429,12 @@ class Interpreter {
       }
 
       const args = node.arguments.map(arg => this.eval(arg, ctx));
-      if (args[1] && args[1] === 493711) {
-        // console.log('here')
-        return 3031957943;
-      }
+      // if (args[1] && args[1] === 493711) {
+      //   // console.log('here')
+      //   return 3031957943;
+      // }
       const result = fn.call(thisCtx, ...args);
-      const resultBlackList = ['length', 'push', 'pop', 'charCodeAt', 'charAt', toString];
+      // const resultBlackList = ['length', 'push', 'pop', 'charCodeAt', 'charAt', toString];
       // if (
       //   typeof result === 'string' &&
       //   !resultBlackList.includes(result) &&

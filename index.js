@@ -23,4 +23,5 @@ const interval = setInterval(() => {
   }
 }, 3000);
 
+console.log('go');
 console.log(new Interpreter(srcCode).eval(ast.program))

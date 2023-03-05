@@ -6286,7 +6286,7 @@
                   }
                   Gh.pop();
                 };
-                var MgE = function () {
+                var MgE = function () { // webgl
                   Gh.push(lv);
                   try {
                     var KgE = Gh.slice();
@@ -6327,7 +6327,7 @@
                   }
                   Gh.pop();
                 };
-                var z5E = function (j5E) {
+                var z5E = function (j5E) { // some props
                   Gh.push(Yv);
                   A5E('<bpd>');
                   var I5E = EF;
@@ -6339,7 +6339,7 @@
                     var w5E = cgE() - win.window.bmak.startTs,
                       D5E = '3';
                     D5E = U5E();
-                    var O5E = Ah(b0, [H5E, IW]),
+                    varO5E = Ah(b0, [H5E, IW]),
                       f5E = win.window.DeviceOrientationEvent
                         ? 'do_en'
                         : 'EI;E@',
@@ -6429,7 +6429,7 @@
                       ),
                       JZE = cgE() - win.window.bmak.startTs,
                       NZE = win.parseInt(nZE / bF, hh),
-                      XZE = (function BZE() {
+                      XZE = (function BZE() { // navigator props
                         Gh.push(hB);
                         try {
                           var dZE = Gh.slice();
@@ -6528,9 +6528,9 @@
                     win.window.bmak.firstLoad && (Ah(b0, [c3E, bF]), z3E()),
                       !j3E &&
                         (!Fh === q5E || Y5E > EF) &&
-                        (!(function A3E() {
+                        (!(function A3E() { // fonts
                           Gh.push(PF);
-                          var I3E = [
+                          var fontNames = [
                             'Monospace',
                             'Wingdings 2',
                             'ITC Bodoni 72 Bold',
@@ -6553,12 +6553,12 @@
                           var s3E =
                             win.document.getElementsByTagName('body')[EF];
                           s3E
-                            ? (I3E.forEach(function (D3E, U3E) {
+                            ? (fontNames.forEach(function (font, U3E) {
                                 Gh.push(sVE);
-                                (Q3E.style.fontFamily = D3E),
+                                (Q3E.style.fontFamily = font),
                                   s3E.appendChild(Q3E),
                                   (x3E += ''
-                                    .concat(D3E, ':')
+                                    .concat(font, ':')
                                     .concat(Q3E.offsetWidth, ',')
                                     .concat(Q3E.offsetHeight, ';')),
                                   s3E.removeChild(Q3E);
@@ -6665,21 +6665,21 @@
                       '-127',
                       APE, // permissions
                       '-128',
-                      X3E,
+                      X3E, // iframe, loading, css
                       '-131',
-                      b3E,
+                      b3E, // navigator.connection, performance.memory
                       '-132',
-                      VPE,
+                      VPE, // chrome object
                       '-133',
-                      IPE,
+                      IPE, // есть ли свойства в самом window.navigator, а не в прототипе?
                       '-70',
                       m5E.fpValStr,
                       '-80',
-                      P3E,
+                      P3E, //
                       '-90',
-                      hZE,
+                      hZE, // events
                       '-116',
-                      QPE,
+                      QPE, //
                     ]),
                       xPE && (x5E.push("'V1", '1'), (sPE = !EF)),
                       x5E.push('-129', f3E),
@@ -6960,7 +6960,7 @@
                   }
                   Gh.pop();
                 };
-                var qzE = function (rzE) {
+                var qzE = function (rzE) { // DeviceOrientation
                   Gh.push(p1);
                   try {
                     var pzE = Gh.slice();
@@ -6993,7 +6993,7 @@
                   }
                   Gh.pop();
                 };
-                var z3E = function () {
+                var z3E = function () { // speechs
                   Gh.push(XW);
                   win.window.speechSynthesis &&
                   win.window.speechSynthesis.getVoices
@@ -7003,7 +7003,7 @@
                     : (L3E = 'n');
                   Gh.pop();
                 };
-                var bzE = function () {
+                var bzE = function () { // speechs
                   Gh.push(xC);
                   var SzE = win.window.speechSynthesis.getVoices();
                   if (SzE.length > EF) {
@@ -7015,7 +7015,7 @@
                   } else L3E = '0';
                   Gh.pop();
                 };
-                var c3E = function () {
+                var c3E = function () { // navigator.permissions
                   Gh.push(cb);
                   var VjE = [];
                   try {
@@ -7097,7 +7097,7 @@
                   }
                   Gh.pop();
                 };
-                var wjE = function () {
+                var wjE = function () { // brave
                   Gh.push(Hb);
                   win.navigator.brave &&
                     win.navigator.brave
@@ -7110,7 +7110,7 @@
                       });
                   Gh.pop();
                 };
-                var h3E = function () {
+                var h3E = function () { // selemium signals
                   Gh.push(Dl);
                   var HjE;
                   return (
@@ -7168,7 +7168,7 @@
                   var qjE;
                   return (qjE = WjE), Gh.pop(), qjE;
                 };
-                var H5E = function () {
+                var H5E = function () { // object props
                   Gh.push(xC);
                   var rjE = pZE();
                   var pjE = ''.concat(Ah(b0, [V3E, EF, rjE]));
@@ -7448,7 +7448,7 @@
                     hAE
                   );
                 };
-                var wAE = function () {
+                var wAE = function () { // navigator props
                   Gh.push(wB);
                   var VIE;
                   return (
@@ -7484,7 +7484,7 @@
                         cIE
                       );
                     })()),
-                    (R3E = (function zIE() {
+                    (R3E = (function zIE() { // styles
                       Gh.push(kv);
                       try {
                         var jIE = Gh.slice();
@@ -7557,7 +7557,7 @@
                     })()),
                     (S3E = ''.concat(UIE(), ',').concat(vzE)),
                     (M3E = OIE()),
-                    (K3E = (function HIE() {
+                    (K3E = (function HIE() { // file path
                       Gh.push(wM);
                       try {
                         var fIE = Gh.slice();
@@ -7586,7 +7586,7 @@
                       }
                       Gh.pop();
                     })()),
-                    (v3E = (function CIE() {
+                    (v3E = (function CIE() { // crossOriginIsolated
                       Gh.push(Yv);
                       var kIE;
                       return (
@@ -7599,7 +7599,7 @@
                         kIE
                       );
                     })()),
-                    (EPE = (function lIE() {
+                    (EPE = (function lIE() { // chrome object
                       Gh.push(n9);
                       if (
                         win.window.chrome &&
@@ -7661,7 +7661,7 @@
                       var nIE;
                       return (nIE = 'OHV'), Gh.pop(), nIE;
                     })()),
-                    (gPE = (function XIE() {
+                    (gPE = (function XIE() { // chrome object
                       Gh.push(pX);
                       var BIE;
                       return (
@@ -7741,7 +7741,7 @@
                         BIE
                       );
                     })()),
-                    (IPE = (function cQE() {
+                    (IPE = (function cQE() { // props in navigator
                       Gh.push(k9);
                       var zQE;
                       return (
@@ -8017,7 +8017,7 @@
                   var rxE;
                   return (rxE = -1), Gh.pop(), rxE;
                 }
-                function V3E(pxE) {
+                function V3E(pxE) { // sum of all charCodes in string
                   Gh.push(X9);
                   if (null == pxE) {
                     var txE;
@@ -8104,7 +8104,7 @@
                   var j2E;
                   return (j2E = z2E), Gh.pop(), j2E;
                 }
-                function r5E() {
+                function r5E() { // someprops
                   Gh.push(NC);
                   try {
                     var A2E = Gh.slice();
@@ -8126,7 +8126,7 @@
                         var O2E = win.navigator.doNotTrack
                           ? win.navigator.doNotTrack
                           : -Fh;
-                        var H2E = (function f2E(L2E) {
+                        var H2E = (function f2E(L2E) { // canvas
                           Gh.push(TK);
                           var T2E = -Fh;
                           var h2E = -Fh;
@@ -8262,16 +8262,16 @@
                   }
                   Gh.pop();
                 }
-                function v2E() {
+                function v2E() { // timezone offset
                   Gh.push(mJ);
                   var ZsE;
                   return (
                     (ZsE = new win.Date().getTimezoneOffset()), Gh.pop(), ZsE
                   );
                 }
-                function b2E() {
+                function b2E() { // plugins
                   Gh.push(DS);
-                  var PsE = [
+                  var pluginsList = [
                     'WebEx64 General Plugin Container',
                     'YouTube Plug-in',
                     'Java Applet Plug-in',
@@ -8305,18 +8305,18 @@
                     return (csE = null), Gh.pop(), csE;
                   }
                   for (
-                    var zsE = PsE.length, jsE = '', AsE = EF;
+                    var zsE = pluginsList.length, jsE = '', AsE = EF;
                     AsE < zsE;
                     AsE++
                   ) {
-                    var IsE = PsE[AsE];
+                    var IsE = pluginsList[AsE];
                     void NF[nF] !== win.navigator.plugins[IsE] &&
                       (jsE = ''.concat(jsE, ',').concat(AsE));
                   }
                   var QsE;
                   return (QsE = jsE), Gh.pop(), QsE;
                 }
-                function VsE() {
+                function VsE() { // webrtc
                   Gh.push(T1);
                   var xsE;
                   return (
@@ -8328,7 +8328,7 @@
                     xsE
                   );
                 }
-                function S2E() {
+                function S2E() { // sessionStorage
                   Gh.push(F1);
                   try {
                     var ssE = Gh.slice();
@@ -8341,7 +8341,7 @@
                   }
                   Gh.pop();
                 }
-                function M2E() {
+                function M2E() { // localStorage
                   Gh.push(Pl);
                   try {
                     var OsE = Gh.slice();
@@ -8354,12 +8354,12 @@
                   }
                   Gh.pop();
                 }
-                function K2E() {
+                function K2E() { // indexedDB
                   Gh.push(Cd);
                   var TsE;
                   return (TsE = !!win.window.indexedDB), Gh.pop(), TsE;
                 }
-                function E3E() {
+                function E3E() { // selenium
                   Gh.push(kd);
                   try {
                     var hsE = Gh.slice();
@@ -8440,7 +8440,7 @@
                   }
                   Gh.pop();
                 }
-                function g3E() {
+                function g3E() { // navigator webdriver
                   Gh.push(ld);
                   try {
                     var lsE = Gh.slice();
@@ -8796,7 +8796,7 @@
                 var zUE = pJ;
                 var jUE = -Fh;
                 var AUE = EF;
-                function IUE(event, xUE, sUE) {
+                function IUE(event, xUE, sUE) { // keyboard event
                   Gh.push(pv);
                   try {
                     var wUE = Gh.slice();
@@ -9084,7 +9084,7 @@
                   var m6E;
                   return (m6E = Y6E ? Y6E.toString() : '-1'), Gh.pop(), m6E;
                 }
-                function ZIE() {
+                function ZIE() { // frame
                   Gh.push(Id);
                   try {
                     var q6E = Gh.slice();
@@ -9255,7 +9255,7 @@
                   }
                   Gh.pop();
                 }
-                function UIE() {
+                function UIE() { // navigator.connection, performance.memory
                   Gh.push(nK);
                   try {
                     var JOE = Gh.slice();
@@ -9284,11 +9284,11 @@
                       })(),
                       SOE = '-1,-1,-1';
                     if (win.window.performance && win.window.performance.memory) {
-                      var MOE = win.window.performance.memory;
+                      var memoryInfo = win.window.performance.memory;
                       SOE = ''
-                        .concat(MOE.jsHeapSizeLimit, ',')
-                        .concat(MOE.totalJSHeapSize, ',')
-                        .concat(MOE.usedJSHeapSize);
+                        .concat(memoryInfo.jsHeapSizeLimit, ',')
+                        .concat(memoryInfo.totalJSHeapSize, ',')
+                        .concat(memoryInfo.usedJSHeapSize);
                     }
                     var KOE;
                     return (
@@ -9301,7 +9301,7 @@
                   }
                   Gh.pop();
                 }
-                function OIE() {
+                function OIE() { // mimetypes and plugins test
                   Gh.push(Ed);
                   var EHE = (function gHE() {
                     Gh.push(dR);
@@ -9329,7 +9329,7 @@
                     }
                     Gh.pop();
                   })();
-                  var jHE = (function AHE() {
+                  var jHE = (function AHE() { // plugins.refresh
                     Gh.push(bR);
                     try {
                       var IHE = Gh.slice();
@@ -9349,7 +9349,7 @@
                     }
                     Gh.pop();
                   })();
-                  var DHE = (function UHE() {
+                  var DHE = (function UHE() { // plugins item
                     Gh.push(SR);
                     try {
                       var OHE = Gh.slice();
@@ -9679,7 +9679,7 @@
                       ((l5E = nG), Ah(b0, [z5E, Fh]), YzE(), wfE++));
                   Gh.pop();
                 }
-                function kcE(nfE, XfE) {
+                function kcE(nfE, XfE) { // mouse event
                   Gh.push(YC);
                   var BfE = (function dfE(RfE, bfE, SfE) {
                     Gh.push(hR);
@@ -9757,7 +9757,7 @@
                       ((l5E = IW), Ah(b0, [z5E, Fh]), YzE()));
                   Gh.pop();
                 }
-                function JcE(x4E, s4E) {
+                function JcE(x4E, s4E) { // pointer event
                   Gh.push(G9);
                   var w4E = (function D4E(U4E, O4E, H4E) {
                     Gh.push(Cv);

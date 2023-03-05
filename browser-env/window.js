@@ -10,7 +10,6 @@ const defineLocation = require('./location');
 const defineHTMLMediaElement = require('./element/HTMLMediaElement');
 const defineScreen = require('./screen');
 const defineIndexedDB = require('./indexedDB');
-const defineCanvas = require('./canvas');
 const defineWebGL = require('./webgl');
 const definePerformance = require('./performance');
 const defineInterval = require('./setInterval');
@@ -411,24 +410,24 @@ defineDocument(window);
 defineFile(window);
 defineAddEventListener(window);
 
-// Object.defineProperty(window.HTMLIFrameElement.prototype, 'loading', {
-//   get() {
+Object.defineProperty(window.HTMLIFrameElement.prototype, 'loading', {
+  get() {
 
-//   },
-//   set() {
+  },
+  set() {
 
-//   }
-// })
+  }
+})
 
-// delete window.SharedArrayBuffer;
-// Object.defineProperties(window, {
-//   'isSecureContext': {
-//     get: () => true
-//   },
-//   'crossOriginIsolated': {
-//     get: () => false
-//   },
-// });
-// global.Function.prototype.toString = window.Function.prototype.toString;
+delete window.SharedArrayBuffer;
+Object.defineProperties(window, {
+  'isSecureContext': {
+    get: () => true
+  },
+  'crossOriginIsolated': {
+    get: () => false
+  },
+});
+global.Function.prototype.toString = window.Function.prototype.toString;
 
 module.exports = window;

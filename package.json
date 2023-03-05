@@ -1,10 +1,11 @@
 {
-  "name": "akamai-deobfuscator-2.0",
+  "name": "akamai",
   "version": "1.0.0",
   "description": "Akamai Bot Manager 2.0 dynamic script deobfuscator from asos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node utils/server.js & node index.js"
   },
   "repository": {
     "type": "git",

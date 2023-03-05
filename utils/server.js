@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 
 app.post('/send', (req, res) => {
-  console.log(req);
   res.send('{"success": true}');
 });
 
