@@ -1,6 +1,6 @@
 # akamai-deobfuscator-2.0
 Akamai Bot Manager 2.0 dynamic script deobfuscator.
-The repository was created for [this article](https://habr.com).
+The repository was created for [this article](https://habr.com/ru/post/720588/).
 ```
 git clone
 npm install
