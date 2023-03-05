@@ -1,0 +1,24 @@
+{
+  "name": "akamai-deobfuscator-2.0",
+  "version": "1.0.0",
+  "description": "Akamai Bot Manager 2.0 dynamic script deobfuscator from asos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rastvl/akamai-deobfuscator-2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rastvl/akamai-deobfuscator-2.0/issues"
+  },
+  "homepage": "https://github.com/rastvl/akamai-deobfuscator-2.0#readme",
+  "dependencies": {
+    "canvas": "^2.11.0",
+    "jsdom": "^21.1.0"
+  }
+}
