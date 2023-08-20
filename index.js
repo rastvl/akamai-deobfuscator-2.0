@@ -12,6 +12,9 @@ function deobfucateCode(ctx) {
   const deobfuscator = new Deobfuscator(ast, env);
   deobfuscator.deobfuscate();
   const code = deobfuscator.getCode();
+  if (!fs.existsSync('./output/')) {
+    fs.mkdirSync('./output/');
+  }
   fs.writeFileSync('./output/deobfuscated.js', code);
 }
 
